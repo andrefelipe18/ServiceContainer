@@ -8,5 +8,6 @@ use Core\Router;
 
 require __DIR__ . '/bootstrap.php';
 
+/** @var DI\Container $container */
 $router = new Router($container);
 $router->create(require '../app/Routes/web.php');

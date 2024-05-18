@@ -173,4 +173,4 @@ It is used in Laravel; that's where I had my first contact with it. Since then, 
 
 I hope this project has been helpful to you and that you can learn something new from it and maybe even implement it in your project to see how useful it can be.
 
-As a tip, consider using PHP-DI, which is a powerful dependency injection container that can be used in various scenarios and can make our lives as developers easier. It can be a great alternative to the Service Container that I showed here.
+As a tip, consider using PHP-DI, which is a powerful dependency injection container that can be used in various scenarios and can make our lives as developers easier. It can be a great alternative to the Service Container that I showed here. See the PHP-DI Branch

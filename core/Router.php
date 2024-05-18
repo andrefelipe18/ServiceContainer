@@ -3,6 +3,7 @@
 namespace Core;
 
 use ReflectionMethod;
+use DI\Container;
 
 class Router
 {
@@ -31,9 +32,7 @@ class Router
 			$method = new ReflectionMethod($controller, $this->method); //Get the method from the controller
 
 			if(method_exists($controller, $this->method)) {
-				return $controller->{$this->method}(
-					...$this->container->resolveContainer->parameters($method, $this->container) //Resolve the parameters for the method
-				);
+				return $controller->{$this->method}();
 			}
 		}
 	}

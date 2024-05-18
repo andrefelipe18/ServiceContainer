@@ -176,4 +176,4 @@ Ele é utilizado no Laravel, foi lá que eu tive meu primeiro contato com ele, e
 
 Espero que esse projeto tenha sido útil para você, e que você possa aprender algo novo com ele, e quem sabe até mesmo implementar ele em seu projeto, e ver como ele pode ser útil.
 
-Como dica fica o uso do PHP-DI, que é um container de injeção de dependência, que é muito poderoso, e que pode ser usado em diversos casos, e que pode facilitar a nossa vida como desenvolvedores, e que pode ser uma ótima alternativa ao Service Container que eu mostrei aqui.
+Como dica fica o uso do PHP-DI, que é um container de injeção de dependência, que é muito poderoso, e que pode ser usado em diversos casos, e que pode facilitar a nossa vida como desenvolvedores, e que pode ser uma ótima alternativa ao Service Container que eu mostrei aqui. Olhe a branch PHP-DI
