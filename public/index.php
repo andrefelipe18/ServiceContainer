@@ -6,7 +6,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Core\Router;
 
-$routes = require '../app/Routes/web.php';
+require __DIR__ . '/bootstrap.php';
 
-$router = new Router();
-$router->create($routes);
+$router = new Router($container);
+$router->create(require '../app/Routes/web.php');

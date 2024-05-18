@@ -2,8 +2,14 @@
 
 namespace Core;
 
+use ReflectionMethod;
+
 class Router
 {
+	public function __construct(
+		private Container $container
+	){}
+
 	private string $controller;
 	private string $method;
 	public function create(array $routes)
@@ -20,9 +26,14 @@ class Router
 	private function makeInstance()
 	{
 		if(class_exists($this->controller)) {
-			$controller = new $this->controller();
+			$controller = $this->container->get($this->controller); //Get the controller from the container
+
+			$method = new ReflectionMethod($controller, $this->method); //Get the method from the controller
+
 			if(method_exists($controller, $this->method)) {
-				return $controller->{$this->method}();
+				return $controller->{$this->method}(
+					...$this->container->resolveContainer->parameters($method, $this->container) //Resolve the parameters for the method
+				);
 			}
 		}
 	}

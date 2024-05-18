@@ -5,5 +5,5 @@ use App\Controllers\UserController;
 
 return [
 	'/' => [HomeController::class, 'index'],
-	'/user' => [UserController::class, 'user']
+	'/user' => [UserController::class, 'index']
 ];
