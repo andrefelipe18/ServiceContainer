@@ -29,10 +29,8 @@ class Router
 		if(class_exists($this->controller)) {
 			$controller = $this->container->get($this->controller); //Get the controller from the container
 
-			$method = new ReflectionMethod($controller, $this->method); //Get the method from the controller
-
 			if(method_exists($controller, $this->method)) {
-				return $controller->{$this->method}();
+				return $this->container->call([$controller, $this->method]); //Call the method from the controller
 			}
 		}
 	}
