@@ -14,6 +14,11 @@ $container->addDefinitions([
 	'KeyInjectInHomeController' => 'ValueInjectInHomeController'
 ]);
 
+$container->addDefinitions([
+	'Chave' => 'Valor',
+	UserRepositoryInterface::class => fn() => new UserRepository()
+]);
+
 $container = $container->build();
 
 return $container;
